@@ -14,5 +14,18 @@
     <packaging>pom</packaging>
     <name>Order Management :: Ops :: Parent</name>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.sobkowiak.demos</groupId>
+                <artifactId>order-service-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
 
 </project>

@@ -18,6 +18,7 @@
     </licenses>
 
     <modules>
+        <module>order-service-bom</module>
         <module>dev</module>
         <module>ops</module>
     </modules>

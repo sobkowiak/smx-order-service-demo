@@ -12,5 +12,28 @@
     <artifactId>order-service-feature</artifactId>
     <name>Order Management :: Dev :: Feature</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.sobkowiak.demos</groupId>
+            <artifactId>order-service-backend</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.sobkowiak.demos</groupId>
+            <artifactId>order-service-normalizer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.sobkowiak.demos</groupId>
+            <artifactId>order-service-file</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.sobkowiak.demos</groupId>
+            <artifactId>order-service-soap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.sobkowiak.demos</groupId>
+            <artifactId>order-service-rest</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>
