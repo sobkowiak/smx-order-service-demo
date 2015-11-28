@@ -23,6 +23,7 @@
         <module>order-service-feature</module>
         <module>order-service-normalizer</module>
         <module>order-service-soap</module>
+        <module>order-service-rest</module>
     </modules>
 
     <properties>

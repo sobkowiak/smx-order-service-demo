@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>order-service-soap</artifactId>
-    <name>Order Management :: Dev :: SOAP Service</name>
+    <artifactId>order-service-rest</artifactId>
+    <name>Order Management :: Dev :: REST Service</name>
     <packaging>bundle</packaging>
 
     <dependencies>
@@ -61,5 +61,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
