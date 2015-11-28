@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.order.demos.sobkowiak.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <soap:order>
+            <name>motor</name>
+            <amount>1</amount>
+        </soap:order>
+    </soapenv:Body>
+</soapenv:Envelope>

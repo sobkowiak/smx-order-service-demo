@@ -22,6 +22,7 @@
         <module>order-service-file</module>
         <module>order-service-feature</module>
         <module>order-service-normalizer</module>
+        <module>order-service-soap</module>
     </modules>
 
     <properties>
@@ -69,6 +70,19 @@
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-blueprint</artifactId>
                 <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-cxf</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+
+            <!-- CXF -->
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http-jetty</artifactId>
+                <version>${cxf.version}</version>
             </dependency>
 
             <!-- ActiveMQ -->
