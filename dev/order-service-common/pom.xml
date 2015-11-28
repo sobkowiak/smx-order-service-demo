@@ -11,6 +11,25 @@
 
     <artifactId>order-service-common</artifactId>
     <name>Order Management :: Dev :: Common</name>
+    <packaging>bundle</packaging>
 
+    <dependencies>
+        <!-- CSV annotations -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-bindy</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- generate OSGi bundle -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

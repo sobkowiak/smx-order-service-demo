@@ -11,6 +11,45 @@
 
     <artifactId>order-service-file</artifactId>
     <name>Order Management :: Dev :: File</name>
+    <packaging>bundle</packaging>
 
+    <dependencies>
+        <!-- Blueprint container support -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-blueprint</artifactId>
+        </dependency>
+
+        <!-- ActiveMQ connectivity for Camel -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-camel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sobkowiak.demos</groupId>
+            <artifactId>order-service-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- generate OSGi bundle -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>!*</Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

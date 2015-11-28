@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 
@@ -16,13 +16,103 @@
     <packaging>pom</packaging>
     <name>Order Management :: Dev :: Parent</name>
 
-
     <modules>
         <module>order-service-common</module>
         <module>order-service-backend</module>
         <module>order-service-file</module>
         <module>order-service-feature</module>
+        <module>order-service-normalizer</module>
     </modules>
+
+    <properties>
+        <activemq.version>5.12.1</activemq.version>
+        <camel.version>2.16.1</camel.version>
+        <cxf.version>3.1.4</cxf.version>
+        <karaf.version>3.0.5</karaf.version>
+        <osgi.version>5.0.0</osgi.version>
+        <slf4j.version>1.7.12</slf4j.version>
+
+        <depends-maven-plugin.version>1.3.1</depends-maven-plugin.version>
+        <maven-bundle-plugin.version>3.0.0</maven-bundle-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.sobkowiak.demos</groupId>
+                <artifactId>order-service-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sobkowiak.demos</groupId>
+                <artifactId>order-service-backend</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sobkowiak.demos</groupId>
+                <artifactId>order-service-file</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Camel -->
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-bindy</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-jaxb</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-blueprint</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+
+            <!-- ActiveMQ -->
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-camel</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+
+
+            <!-- slf4j -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>${maven-bundle-plugin.version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.servicemix.tooling</groupId>
+                    <artifactId>depends-maven-plugin</artifactId>
+                    <version>${depends-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
 
 
 </project>
