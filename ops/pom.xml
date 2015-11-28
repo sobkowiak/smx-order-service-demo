@@ -14,10 +14,10 @@
     <packaging>pom</packaging>
     <name>Order Management :: Ops :: Parent</name>
     <modules>
-        <module>order-service-full-distribution</module>
-        <module>order-service-broker-distribution</module>
-        <module>order-service-backend-distribution</module>
-        <module>order-service-interfaces-distribution</module>
+        <module>order-service-full-runtime</module>
+        <module>order-service-broker-runtime</module>
+        <module>order-service-backend-runtime</module>
+        <module>order-service-interfaces-runtime</module>
     </modules>
 
     <dependencyManagement>

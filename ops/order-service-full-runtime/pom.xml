@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>order-service-full-distribution</artifactId>
+    <artifactId>order-service-full-runtime</artifactId>
     <packaging>karaf-assembly</packaging>
-    <name>Order Management :: Ops :: Full Distribution</name>
+    <name>Order Management :: Ops :: Full Runtime</name>
 
     <dependencies>
         <dependency>
