@@ -13,6 +13,12 @@
     <artifactId>order-service.ops</artifactId>
     <packaging>pom</packaging>
     <name>Order Management :: Ops :: Parent</name>
+    <modules>
+        <module>order-service-full-distribution</module>
+        <module>order-service-broker-distribution</module>
+        <module>order-service-backend-distribution</module>
+        <module>order-service-interfaces-distribution</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>

@@ -19,8 +19,6 @@
 -->
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.2.1" name="order-service-feature">
 
-
-
     <feature name='order-service-common' description='Order Management :: Dev :: Common' version='${project.version}'>
         <feature version="${camel.version}">camel-bindy</feature>
         <bundle start-level="80">mvn:${project.groupId}/order-service-common/${project.version}</bundle>
