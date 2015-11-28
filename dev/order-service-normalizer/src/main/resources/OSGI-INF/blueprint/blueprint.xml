@@ -44,6 +44,8 @@
     </bean>
     -->
 
+    <reference id="bindy" interface="org.apache.camel.spi.DataFormatResolver" timeout="30000"/>
+
     <camelContext id="order-service-normalizer" trace="false"
                   xmlns="http://camel.apache.org/schema/blueprint">
 
@@ -63,10 +65,10 @@
                 </when>
                 <when>
                     <simple>${header.CamelFileName} regex '^.*(csv|csl)$'</simple>
-                    <unmarshal ref="bindyDataFormat"/>
-                    <!--<unmarshal>
+                    <!--<unmarshal ref="bindyDataFormat"/>-->
+                    <unmarshal>
                         <bindy classType="org.sobkowiak.demos.order.common.Order" type="Csv"/>
-                    </unmarshal>-->
+                    </unmarshal>
                     <convertBodyTo type="org.sobkowiak.demos.order.common.Order"/>
                 </when>
             </choice>
