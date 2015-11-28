@@ -29,17 +29,11 @@
     <properties>
         <depends-maven-plugin.version>1.3.1</depends-maven-plugin.version>
         <maven-bundle-plugin.version>3.0.0</maven-bundle-plugin.version>
+        <karaf-maven-plugin.version>3.0.5</karaf-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.sobkowiak.demos</groupId>
-                <artifactId>order-service-bom</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
          </dependencies>
     </dependencyManagement>
 
@@ -56,6 +50,12 @@
                     <groupId>org.apache.servicemix.tooling</groupId>
                     <artifactId>depends-maven-plugin</artifactId>
                     <version>${depends-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.karaf.tooling</groupId>
+                    <artifactId>karaf-maven-plugin</artifactId>
+                    <version>${karaf-maven-plugin.version}</version>
+                    <extensions>true</extensions>
                 </plugin>
             </plugins>
         </pluginManagement>
