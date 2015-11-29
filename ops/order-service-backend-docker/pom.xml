@@ -15,6 +15,7 @@
     <properties>
         <karaf.docker.version>0.1</karaf.docker.version>
         <port.prefix>2</port.prefix>
+        <image.alias>backend</image.alias>
     </properties>
 
     <dependencies>
@@ -35,7 +36,7 @@
                     <images>
                         <image>
                             <name>sobkowiak/order-service-backend-docker:${karaf.docker.version}</name>
-                            <alias>backend</alias>
+                            <alias>${image.alias}</alias>
                             <build>
                                 <from>jeanblanchard/java:jdk-7</from>
                                 <ports>
