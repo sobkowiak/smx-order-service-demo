@@ -18,13 +18,19 @@
         <module>order-service-broker-runtime</module>
         <module>order-service-backend-runtime</module>
         <module>order-service-interfaces-runtime</module>
+        <module>order-service-backend-docker</module>
+        <module>order-service-interfaces-docker</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-        </dependencies>
-    </dependencyManagement>
+    <profiles>
+        <profile>
+            <id>docker</id>
 
+            <modules>
+                <module>order-service-broker-docker</module>
+            </modules>
+        </profile>
+    </profiles>
 
 
 </project>
