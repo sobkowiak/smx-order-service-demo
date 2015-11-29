@@ -18,8 +18,6 @@
         <module>order-service-broker-runtime</module>
         <module>order-service-backend-runtime</module>
         <module>order-service-interfaces-runtime</module>
-        <module>order-service-backend-docker</module>
-        <module>order-service-interfaces-docker</module>
     </modules>
 
     <profiles>
@@ -28,6 +26,8 @@
 
             <modules>
                 <module>order-service-broker-docker</module>
+                <module>order-service-backend-docker</module>
+                <module>order-service-interfaces-docker</module>
             </modules>
         </profile>
     </profiles>
