@@ -43,6 +43,7 @@
                                     <port>5005</port>
                                     <port>8101</port>
                                     <port>8181</port>
+                                    <port>8989</port>
                                     <port>44444</port>
                                 </ports>
                                 <volumes>
@@ -78,6 +79,7 @@
                                     <port>${port.prefix}5005:5005</port>
                                     <port>${port.prefix}8101:8101</port>
                                     <port>${port.prefix}8181:8181</port>
+                                    <port>${port.prefix}8989:8989</port>
                                     <port>${port.prefix}4444:44444</port>
                                 </ports>
                             </run>
