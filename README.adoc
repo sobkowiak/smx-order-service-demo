@@ -1,1 +1,5 @@
 # Demo for 33rd Degree 4charity 2015 conference
+
+## Architecture
+
+image:doc/SampleArchitecture.png
