@@ -1,0 +1,7 @@
+# The demo Architecture
+
+The Camel routes used in this example are explained by the following diagram:
+
+image:SampleArchitecture.png[width="100%"]
+
+To run this example project build the project and deploy to Apache ServiceMix (or Apache Karaf)

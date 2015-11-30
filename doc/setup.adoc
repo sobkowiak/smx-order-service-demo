@@ -1,0 +1,16 @@
+# Setup the demo
+
+* Install Apache Maven 3+
+** Download distribution from http://maven.apache.org.
+** Unzip the downloaded Maven distribution to a location on your hard disk that you find suitable.
+** Configure this location as the environment variable `MAVEN_HOME`
+** Add `MAVEN_HOME/bin` to your `PATH` environment variable
+* Install Apache ServiceMix 6.1.0
+** Download distribution from http://service.apache.org.
+** Unzip the downloaded ServiceMix distribution to a location on your hard disk that you find suitable.
+** Configure this location as the environment variable `SMX_HOME`
+* Install Apache Karaf 3.0.5 (optional, if you want to run the demo on Karaf)
+** Download distribution from http://karaf.apache.org.
+** Unzip the downloaded Karaf distribution to a location on your hard disk that you find suitable.
+** Configure this location as the environment variable `KARAF_HOME`
+* Install Docker accroding to instruction suitable for your operating system - http://docs.docker.com/engine/installation/

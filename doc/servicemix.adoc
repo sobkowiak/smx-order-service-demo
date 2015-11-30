@@ -1,0 +1,40 @@
+# Building & running the demo on Apache ServiceMix
+
+To run this demo on Apache ServiceMix you must perform following steps:
+
+. Build this project to deploy the bundles into your local maven repo
+
+  mvn clean install
+
+. Start ServiceMix
+
+  $SMX_HOME/bin/servicemix
+
+. Add this projects features.xml config to ServiceMix from the Console (makes it easier to install bundles with all required dependencies) 
+
+  feature:repo-add mvn:org.sobkowiak.demos/order-service-feature/1.0.0-SNAPSHOT/xml/features
+
+. Install the project
+  
+  feature:install order-service-common 
+  feature:install order-service-backend 
+  feature:install order-service-normalizer 
+  feature:install order-service-file 
+  feature:install order-service-rest 
+  feature:install order-service-soap 
+
+. To test the file processing, there are existing files in the `order-service-file` module
+
+  cp dev/order-service-file/src/test/resources/data/message1.xml $SMX_HOME/target/placeorder/
+  cp dev/order-service-file/src/test/resources/data/message2.csv $SMX_HOME/target/placeorder/
++
+To see what happened look at the log file, either from the console
+
+ log:tail
++
+or from the command line
+
+  tail -f data/log/servicemix.log
+  
+. To test the SOAP, use your favorite WS tool (e.g. SoapUI) against the following WSDL http://localhost:8989/soap/order?wsdl hosted by the `order-service-soap` bundle. You can use the sample request from link:../dev/order-service-soap/src/test/resources/data[`dev/order-service-soap/src/test/resources/data`]
+. To test the REST, use your favorite WS tool (e.g. SoapUI) against the following WADL http://localhost:8989/rest/?_wadl hosted by the `order-service-rest` bundle. You can use the sample request from link:../dev/order-service-rest/src/test/resources/data[`dev/order-service-rest/src/test/resources/data`]
