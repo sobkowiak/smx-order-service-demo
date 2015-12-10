@@ -30,18 +30,4 @@ This demo works on Apache Karaf similar to the demo on Apache ServiceMix, but yo
   feature:install order-service-rest 
   feature:install order-service-soap 
 
-. To test the file processing, there are existing files in the `order-service-file` module
-
-  cp dev/order-service-file/src/test/resources/data/message1.xml $SMX_HOME/target/placeorder/
-  cp dev/order-service-file/src/test/resources/data/message2.csv $SMX_HOME/target/placeorder/
-+
-To see what happened look at the log file, either from the console
-
- log:tail
-+
-or from the command line
-
-  tail -f data/log/karaf.log
-  
-. To test the SOAP, use your favorite WS tool (e.g. SoapUI) against the following WSDL http://localhost:8989/soap/order?wsdl hosted by the `order-service-soap` bundle. You can use the sample request from link:../dev/order-service-soap/src/test/resources/data[`dev/order-service-soap/src/test/resources/data`]
-. To test the REST, use your favorite WS tool (e.g. SoapUI) against the following WADL http://localhost:8989/rest/?_wadl hosted by the `order-service-rest` bundle. You can use the sample request from link:../dev/order-service-rest/src/test/resources/data[`dev/order-service-rest/src/test/resources/data`]
+. link:testing-interfaces.adoc[Test the interfaces]
