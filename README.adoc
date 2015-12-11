@@ -14,7 +14,9 @@ To run this example project build the project and deploy to Apache ServiceMix (o
 * Build & run:
 ** link:doc/servicemix.adoc[Building & running the demo on Apache ServiceMix]
 ** link:doc/karaf.adoc[Building & running the demo on Apache Karaf]
+** link:doc/full-distribution.adoc[Building & running the custom distribution]
 * link:doc/testing-interfaces.adoc[Test the interfaces]
+* link:doc/custom-distributions.adoc[Custom distributions]
 
 ## Copyright and Licensing
 

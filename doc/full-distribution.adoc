@@ -1,0 +1,20 @@
+# Building & running the custom distribution
+
+Instead of installing the features on link:servicemix.adoc[Apache ServiceMix] or link:karaf.adoc[Apache Karaf] you can use the link:../ops/order-service-full-runtime[full custom distribution] which includes all features preinstalled.
+
+The distribution is built automatically while building the demo.
+
+. Build this project to deploy the bundles into your local maven repo
+
+  mvn clean install
+
+. Go to `ops/order-service-full-runtime/target` and unpack the distribution assembly according to the operating system you use
+
+  cd ops/order-service-full-runtime/target
+  tar xvf *.tgz
+
+. Start Karaf
+
+  order-service-full-runtime-1.0.0-SNAPSHOT/bin/karaf
+
+. link:testing-interfaces.adoc[Test the interfaces]

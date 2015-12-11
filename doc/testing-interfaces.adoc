@@ -9,9 +9,13 @@ To see what happened look at the log file, either from the console
 
  log:tail
 +
-or from the command line
+or from the command line (ServiceMix):
 
   tail -f data/log/servicemix.log
++
+(or Karaf):
+
+  tail -f data/log/karaf.log
   
 . To test the SOAP, use your favorite WS tool (e.g. SoapUI) against the following WSDL `http://localhost:8989/soap/order?wsdl` hosted by the `order-service-soap` bundle. You can use the sample request from link:../dev/order-service-soap/src/test/resources/data[`dev/order-service-soap/src/test/resources/data`]
 . To test the REST, use your favorite WS tool (e.g. SoapUI) against the following WADL `http://localhost:8989/rest/?_wadl` hosted by the `order-service-rest` bundle. You can use the sample request from link:../dev/order-service-rest/src/test/resources/data[`dev/order-service-rest/src/test/resources/data`]

@@ -1,0 +1,20 @@
+# Custom distributions
+
+This demo provides some custom distributions used later to build Docker images. The distributions are built automatically while building the demo.
+
+Following custom distributions are present (including the given features)
+
+* link:ops/order-service-full-runtime[`order-service-full-runtime`] -- the full distribution containing all features:
+** `order-service-backend`
+** `order-service-normalizer`
+** `order-service-file`
+** `order-service-soap`
+** `order-service-rest`
+* link:ops/order-service-backend-runtime[`order-service-backend-runtime`] -- the distribution containing the backend features:
+** `order-service-backend`
+* link:ops/order-service-broker-runtime[`order-service-broker-runtime`] -- the distribution containing the ActiveMQ broker and the normalizer feature:
+** `order-service-normalizer`
+* link:ops/order-service-interfaces-runtime[`order-interfaces-full-runtime`] -- the distribution containing the interface features:
+** `order-service-file`
+** `order-service-soap`
+** `order-service-rest`
